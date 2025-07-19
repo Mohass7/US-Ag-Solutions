@@ -613,11 +613,13 @@ box-shadow: 0 0 10px #0c5a63;
         filter: drop-shadow(20px 20px 10px rgba(0,0,0,0.5));
     }
 
-    
+    .navbar{
+        border: solid;
+    }
     
 }
 
-/* @media(max-width: 670px) {
+@media(max-width: 670px) {
     
     .text-xxl {
         font-size: 2rem;
@@ -632,10 +634,20 @@ box-shadow: 0 0 10px #0c5a63;
     }
 
   
-} */
+}
 
 @media(max-width: 600px){
-    
+     .navbar {
+        border: solid;
+    }
+
+    .hero .hero-heading {
+        font-size: 1.5rem;
+    }
+
+    .hero .container .hero-content .hero-text{
+        font-size: 1rem;
+    }
     
    
 }
@@ -646,14 +658,9 @@ box-shadow: 0 0 10px #0c5a63;
 }
 
 @media (max-width: 500px) {
-   .text-xxl{
-    font-size: 2rem;
+   
    }
 
-   .hero .hero-content p{
-    font-size: 1rem;
-   }
-}
 
 
 
