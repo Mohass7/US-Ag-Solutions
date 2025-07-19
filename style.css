@@ -215,6 +215,9 @@ img{
     margin-right: 40px;
 }
 
+.benefits .left-side{
+    width: 50%;
+}
 
 .benefits .left-side .small-text{
     margin-bottom: 0;
