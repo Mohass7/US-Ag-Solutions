@@ -73,7 +73,7 @@
                 Innovative Salinity & Soil Health Solutions from US AG Solutions
             </p>
 
-            <button class="regular-button">
+            <button class="regular-button" onclick="openPopup()"  onclick="openPopup()">
                 Contact Us
             </button>
 
@@ -135,7 +135,7 @@
                         and allows the root a full access to nutrients available
                     </p>
                 </div>
-                <button class="regular-button">
+                <button class="regular-button" onclick="openPopup()" >
                     Contact Us
                 </button>
             </div>    
@@ -175,7 +175,7 @@
                         soil and improving drainage and acration. 
                     </p>
                 </div>
-                <button class="regular-button">
+                <button class="regular-button" onclick="openPopup()" >
                     Contact Us
                 </button>
             </div>    
@@ -211,7 +211,7 @@
                         , and plant vigor.
                     </p>
                 </div>
-                <button class="regular-button">
+                <button class="regular-button" onclick="openPopup()" >
                     Contact Us
                 </button>
             </div>    
@@ -318,6 +318,66 @@
         </div>
        </footer>
 
+        <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popupOverlay" onclick="closePopup(event)">
+        <div class="popup-container" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closePopup()">&times;</button>
+            
+            <div class="popup-header">
+                <h2 class="popup-title text-xxl">Get In Touch</h2>
+                <p class="popup-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
+
+            <form action="https://api.web3forms.com/submit" method="POST"  class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label class="form-label" for="name">Full Name</label>
+                    <input type="text" id="name" class="form-input" required>
+                </div>
+                <input type="hidden" name="access_key" value="5b75f38a-8746-4210-9cac-926dba02d0de">
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address</label>
+                    <input type="email" id="email" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="subject">Subject</label>
+                    <input type="text" id="subject" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="message">Message</label>
+                    <textarea id="message" class="form-textarea" required placeholder="Tell us how we can help you..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+
+            <div class="contact-info">
+                <h3>Other Ways to Reach Us</h3>
+                
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    contact@company.com
+                </div>
+                
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    +1 (555) 123-4567
+                </div>
+                
+                <div class="contact-item">
+                    <svg class="contact-icon" viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    123 Business Ave, Suite 100<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New York, NY 10001
+                </div>
+            </div>
+        </div>
+    </div>
        <script src="main.js"></script>
 </body>
 </html>

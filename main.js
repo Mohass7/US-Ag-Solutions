@@ -60,3 +60,42 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenu.classList.toggle('active')
 );
 });
+
+
+//Contact Us Pop Up 
+function openPopup() {
+    const overlay = document.getElementById('popupOverlay');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closePopup(event) {
+    if (event && event.target !== event.currentTarget) return;
+    
+    const overlay = document.getElementById('popupOverlay');
+    overlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+function handleSubmit(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+    
+    // Simulate form submission
+    alert(`Thank you, ${name}! Your message has been sent. We'll get back to you at ${email} soon.`);
+    
+    // Reset form
+    event.target.reset();
+    closePopup();
+}
+
+// Close popup with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closePopup();
+    }
+});
