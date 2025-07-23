@@ -329,8 +329,7 @@
                 <p class="popup-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
             </div>
 
-            <form action="https://api.web3forms.com/submit" method="POST"  class="contact-form" onsubmit="handleSubmit(event)">
-                <input type="hidden" name="access_key" value="cd8c563d-c31e-4ad8-a023-e69ccf1699cf">
+            <form name="form-name" method="POST" data-netlify="true" class="contact-form" onsubmit="handleSubmit(event)">
                 <div class="form-group">
                     <label class="form-label" for="name">full shame</label>
                     <input type="text" name="name" id="name" class="form-input" required>
