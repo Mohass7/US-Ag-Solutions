@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0å,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel = "stylesheet" href="style.css">
+    
     <!-- <link rel="shortcut icon" href="images/" -->
 </head>
 <body>
@@ -329,24 +330,25 @@
             </div>
 
             <form action="https://api.web3forms.com/submit" method="POST"  class="contact-form" onsubmit="handleSubmit(event)">
+                <input type="hidden" name="access_key" value="cd8c563d-c31e-4ad8-a023-e69ccf1699cf">
                 <div class="form-group">
-                    <label class="form-label" for="name">Full Name</label>
-                    <input type="text" id="name" class="form-input" required>
+                    <label class="form-label" for="name">Full hame</label>
+                    <input type="text" name="name" id="name" class="form-input" required>
                 </div>
-                <input type="hidden" name="access_key" value="5b75f38a-8746-4210-9cac-926dba02d0de">
+                <!-- <input type="hidden" name="access_key" value="5b75f38a-8746-4210-9cac-926dba02d0de"> -->
                 <div class="form-group">
                     <label class="form-label" for="email">Email Address</label>
-                    <input type="email" id="email" class="form-input" required>
+                    <input type="email" name="" id="email" class="form-input" required>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label" for="subject">Subject</label>
-                    <input type="text" id="subject" class="form-input" required>
+                    <input type="text"  name="subject" id="subject" class="form-input" required>
                 </div>
 
                 <div class="form-group">
                     <label class="form-label" for="message">Message</label>
-                    <textarea id="message" class="form-textarea" required placeholder="Tell us how we can help you..."></textarea>
+                    <textarea id="message" name="message" class="form-textarea" required placeholder="Tell us how we can help you..."></textarea>
                 </div>
 
                 <button type="submit" class="submit-btn">Send Message</button>
