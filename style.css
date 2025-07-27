@@ -381,6 +381,12 @@ footer ul li{
     align-items: center; 
     margin-right: 10px
 }
+/* Hide Our Product menu items */
+.navbar .main-menu ul li:nth-child(2) a,
+.mobile-menu ul li:nth-child(2) a {
+    display: none;
+}
+
 /* Utility Classes */
 .container{
     max-width: 1100px;
