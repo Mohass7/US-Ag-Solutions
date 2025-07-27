@@ -2,7 +2,7 @@ const sliders = document.querySelectorAll(".right-side .slider");
 
 sliders.forEach((slider) => {
     const parent = slider.closest(".right-side");
-    const beforeImage = parent.querySelector(".before-1-image");
+    const beforeImage = parent.querySelector(".before-image");
     const sliderLine = parent.querySelector(".slider-line");
     const sliderIcon = parent.querySelector(".slider-icon");
 

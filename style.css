@@ -187,6 +187,7 @@ img{
 /* Product Pitch Section */
 .product-pitch{
     margin-top: 200px;
+    margin-bottom: 200px;
 }
 
 .product-pitch .container p{
@@ -198,13 +199,13 @@ img{
     text-align: center;
 }
 
-/* Benefits Section */
-.benefits{
+/* split-layout Section */
+.split-layout, .reverse-split-layout{
     width: 100%;
-    margin: 250px 0 200px;
+    margin: 0px 0 200px;
 }
 
-.benefits .container{
+.split-layout .container{
     width: 100%;
     max-width: none;
     display:flex;
@@ -212,27 +213,39 @@ img{
     align-items: center;
 }
 
- .benefits .left-side{
+.reverse-split-layout .container {
+    width: 100%;
+    max-width: none;
+    display: flex; 
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.left-side{
     width: 100%;
     margin-right: 40px;
 }
 
-.benefits .left-side{
+.reverse-split-layout .left-side {
+    margin-left: 40px;
+}
+
+.left-side{
     width: 50%;
 }
 
-.benefits .left-side .small-text{
+.left-side .small-text{
     margin-bottom: 0;
 }
 
-.benefits .left-side .text-xxl{
+ .left-side .text-xxl{
     margin-top: 16px;
 } 
 
 .right-side{
     max-width: 700px;
     margin: 20px auto;
-
     overflow: hidden;
 }
 
@@ -258,7 +271,7 @@ img{
     object-fit: cover;
 }
 
-.right-side .image-container .before-1-image{
+.right-side .image-container .before-image{
     position: absolute;
     top: 0;
     width: 50%;
@@ -705,17 +718,46 @@ box-shadow: 0 0 10px #0c5a63;
     fill: var(--primary-color);
 }
 
+/* about.html */
+.about .container {
+    background-color: #f8f8f8;
+}
+.about-hero {
+    background-color: #f8f8f8;
+}
+
+.about .about-1 {
+    margin: 0;
+}
+
+.about-hero .text-xxl {
+    text-align: center;
+}
+
+.about-hero-image {
+    margin-top: 16px;
+    width: 65%;
+    filter: drop-shadow(40px 40px 20px rgba(0,0,0,0.5));
+}
+
+.about-how-to-buy .container{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 48px;
+}
 
 
 /* Media Queries */
 @media(max-width: 6000px){
-    .benefits .before-after-3{
+    .split-layout .before-after-3{
         width: 1000px;
     }
 }
 
 @media (max-width: 960px) {
-    .benefits .before-after-3{
+    .split-layout .before-after-3{
         width: 100%
     }
     .intro-image img{
@@ -738,12 +780,12 @@ box-shadow: 0 0 10px #0c5a63;
         min-height: 200px;
     }
 
-    .benefits .container{
+    .split-layout .container, .reverse-split-layout .container{
         display: flex; 
         flex-direction: column-reverse;
     }
 
-    .benefits .left-side {
+    .left-side {
         margin-left: 100px;
         margin-top: 50px;
         width: 85%
@@ -805,16 +847,10 @@ box-shadow: 0 0 10px #0c5a63;
         font-size: 0.8rem;
     }
 
-    /* .hero .hero-heading {
-        font-size: 1.5rem;
-    }
-
-    .hero .container .hero-content .hero-text{
-        font-size: 1rem;
-    } */
+   
 
     .hero .container .product-bag{
-        width: 100%px;
+        width: 100%;
     }
 
   

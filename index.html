@@ -9,21 +9,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0å,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel = "stylesheet" href="style.css">
-    
-    <!-- <link rel="shortcut icon" href="images/" -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
 </head>
 <body>
   <nav class="navbar">
     <div class="container">
         <div class="logo">
             <a href="index.html">
-                <img src="images/US AG Solution Logo.svg"alt="logo">
+                <img src="./images/US AG Solution Logo.svg"alt="logo">
             </a>
         </div>
         <div class="main-menu">
             <ul>
                 <li>
-                    <a href="#">About Us</a>  
+                    <a href="/navigation/about.html">About Us</a>  
                 </li>
                 <li>
                     <a href="#">Our Product</a>  
@@ -38,7 +37,7 @@
             </ul>
         </div>
         <!-- Hamburger Button -->
-         <button id="hamburger-button" class="hamburger-button">
+         <button class="hamburger-button">
             <div class="hamburger-line"></div>
             <div class="hamburger-line"></div>
             <div class="hamburger-line"></div>
@@ -47,7 +46,7 @@
          <div class="mobile-menu">
             <ul>
                 <li>
-                    <a href="#">About Us</a>  
+                    <a href="/navigation/about.html">About Us</a>  
                 </li>
                 <li>
                     <a href="#">Our Product</a>  
@@ -119,14 +118,14 @@
         </div>
     </section>
 
-      <!-- product benefits -->
-       <section class="benefits">
+      <!-- product benefits split-layout -->
+       <section class="benefits split-layout">
         <div class="container">
             <div class="left-side">
                 <div class="small-text text-sm">
                     Salt Removal
                 </div>
-                <div class="benefit-texts">
+                <div class="split-layout-text">
                     <h1 class="title text-xxl">
                         Displacement Sodium(Na)
                     </h1>
@@ -142,7 +141,7 @@
             </div>    
             <div class="right-side">
                 <div class="image-container">
-                    <img class="before-1-image slider-image" src="./images/before-1-image.png" alt="Before image">
+                    <img class="before-image slider-image" src="./images/before-1-image.png" alt="Before image">
                     <img class="after-1-image slider-image" src="./images/after-1-image.png" alt="After image">
                     
                     <div class="slider-line"></div>
@@ -161,13 +160,13 @@
        </section>
        
 
-       <section class="benefits">
+       <section class="benefits split-layout">
         <div class="container">
             <div class="left-side">
                 <div class="small-text text-sm">
                     Soil Loosening
                 </div>
-                <div class="benefit-texts">
+                <div class="split-layout-text">
                     <h1 class="title text-xxl">
                         Improves Soil Structure
                     </h1>
@@ -182,7 +181,7 @@
             </div>    
             <div class="right-side">
                 <div class="image-container">
-                    <img class="before-1-image slider-image" src="./images/before-2-image.PNG" alt="Before image">
+                    <img class="before-image slider-image" src="./images/before-2-image.PNG" alt="Before image">
                     <img class="after-1-image slider-image" src="./images/after-2-image.png" alt="After image">
                     
                     <div class="slider-line"></div>
@@ -197,13 +196,13 @@
             </div>
        </section>
 
-       <section class="benefits">
+       <section class="benefits split-layout">
         <div class="container">
             <div class="left-side">
                 <div class="small-text text-sm">
                     Rapid Growth
                 </div>
-                <div class="benefit-texts">
+                <div class="split-layout-text">
                     <h1 class="title text-xxl">
                         Delivers Quick Nitrogen Uptake
                     </h1>
@@ -219,7 +218,7 @@
             <div class="right-side">
                 <div class="image-container">
                     <div class="before-after-3">
-                        <img class="before-1-image slider-image" src="./images/before-3-image.jpg" alt="Before image">
+                        <img class="before-image slider-image" src="./images/before-3-image.jpg" alt="Before image">
                         <img class="after-1-image slider-image" src="./images/after-3-image.jpg" alt="After image">
                     </div>
                     <div class="slider-line"></div>
@@ -296,7 +295,7 @@
                 <div>
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="#"> About Us</a></li>
+                        <li><a href="./navigation/about.html"> About Us</a></li>
                         <li><a href="#"> Our Process</a></li>
                         <li><a href="#"> Join Us</a></li>
                     </ul>
@@ -329,15 +328,18 @@
                 <p class="popup-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
             </div>
 
-            <form name="form-name" method="POST" data-netlify="true" class="contact-form" onsubmit="handleSubmit(event)">
+            <form action="https://api.web3forms.com/submit" method="POST" name="contact" class="contact-form">
+                <input type="hidden" name="access_key" value="5b75f38a-8746-4210-9cac-926dba02d0de">
+                <input type="hidden" name="redirect" value="thank-you.html">
+
                 <div class="form-group">
-                    <label class="form-label" for="name">full shame</label>
+                    <label class="form-label" for="name">Full Name</label>
                     <input type="text" name="name" id="name" class="form-input" required>
                 </div>
-                <!-- <input type="hidden" name="access_key" value="5b75f38a-8746-4210-9cac-926dba02d0de"> -->
+               
                 <div class="form-group">
                     <label class="form-label" for="email">Email Address</label>
-                    <input type="email" name="" id="email" class="form-input" required>
+                    <input type="email" name="email" id="email" class="form-input" required>
                 </div>
 
                 <div class="form-group">
@@ -349,6 +351,8 @@
                     <label class="form-label" for="message">Message</label>
                     <textarea id="message" name="message" class="form-textarea" required placeholder="Tell us how we can help you..."></textarea>
                 </div>
+
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
