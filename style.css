@@ -382,6 +382,24 @@ footer ul li{
     margin-right: 10px
 }
 
+/* Change About Us to About */
+.navbar .main-menu ul li:first-child a,
+.mobile-menu ul li:first-child a {
+    font-size: 0;
+}
+.navbar .main-menu ul li:first-child a:after,
+.mobile-menu ul li:first-child a:after {
+    content: "About";
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Add cursor pointer to About link */
+.navbar .main-menu ul li:first-child,
+.mobile-menu ul li:first-child {
+    cursor: pointer;
+}
+
 /* Utility Classes */
 .container{
     max-width: 1100px;
