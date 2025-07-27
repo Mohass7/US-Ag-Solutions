@@ -16,6 +16,7 @@ body{
     font-size: 16px;
     line-height: 1.5;
     background: #fff;
+    border-top: 5px solid red;
 }
 
 a{
@@ -832,7 +833,3 @@ box-shadow: 0 0 10px #0c5a63;
 @media (max-width: 500px) {
    
    }
-
-
-
-
