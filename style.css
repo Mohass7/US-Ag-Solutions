@@ -383,8 +383,8 @@ footer ul li{
 }
 /* Hide Our Product menu items */
 .navbar .main-menu ul li:nth-child(2) a,
-.mobile-menu ul li:nth-child(2) a {
-    display: none;
+.navbar .mobile-menu ul li:nth-child(2) a {
+    display: none !important;
 }
 
 /* Utility Classes */
