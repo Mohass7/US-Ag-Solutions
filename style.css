@@ -9,6 +9,7 @@
     --secondary-color: #159C6A;
     --light-color: #f5f5f7;
     --light-gray-text: #0009;
+    --gray-background: #f8f8f8;
 }
 
 body{
@@ -34,6 +35,21 @@ li{
 
 img{
     max-width: 100%;
+}
+
+dt::before {
+    content: "• ";
+}
+
+dd {
+    margin-left: 40px; 
+    font-size: 1.2rem;
+    color: var(--light-gray-text);
+}
+
+dt {
+    font-size: 1.4rem;
+    color: var(--primary-color);
 }
 
 
@@ -206,6 +222,7 @@ img{
 }
 
 .split-layout .container{
+    background-color: var(--gray-background);
     width: 100%;
     max-width: none;
     display:flex;
@@ -225,6 +242,7 @@ img{
 .left-side{
     width: 100%;
     margin-right: 40px;
+    margin-bottom: 40px;
 }
 
 .reverse-split-layout .left-side {
@@ -746,6 +764,57 @@ box-shadow: 0 0 10px #0c5a63;
     justify-content: center; 
     align-items: center; 
     margin-bottom: 48px;
+}
+
+/* products.html */
+.soil-guard {
+    background-color: var(--gray-background);
+}
+.soil-guard .container {
+    width: 100%; 
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.soil-guard .right-side {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.soil-guard-phase-a{
+    margin: 0;
+}
+
+.soil-guard-phase-a .arrow-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  margin-top: -40px;
+  margin-bottom: -40px;
+  padding: 16px;;
+}
+
+
+.soil-guard-phase-a .arrow-container img{
+    width: 200px;
+}
+
+.soil-guard-phase-b {
+    margin-bottom: 20px;
+}
+
+.soil-guard-application {
+    background-color: var(--gray-background);
+}
+
+.soil-guard-application .container .application-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 
