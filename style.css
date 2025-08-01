@@ -1005,21 +1005,10 @@ box-shadow: 0 0 10px #0c5a63;
 }
 
 @media(max-width: 670px) {
+    .navbar {
+        border: solid;
+    }
     
-    .text-xxl {
-        font-size: 2rem;
-    }
-
-    .text-xl {
-       font-size: 1.2rem; 
-    }
-
-    .text-lg {
-        font-size: 0.8rem;
-    }
-
-   
-
     .hero .container .product-bag{
         width: 100%;
     }
